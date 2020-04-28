@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Launch file to start the AR.Drone 2.0 simulator for AER1217 -->
+<!-- UTIAS CARRE AER1217 - Winter 2017 
+-->
+
+<launch>
+
+  <!-- Launch the world generation -->
+  <include file="$(find aer1217_ardrone_simulator)/launch/world.launch"
+    />
+ 
+  <!-- Create ROS node that simulates the AR Drone 2 and the VICON system. It subscribes to desired roll angle, pitch angle, yaw rate, climb rate and publishes current position and attitude -->
+  <node name="lab_interface" pkg="aer1217_ardrone_simulator" 
+    type="indoor_robotics_lab_interface.py" output="screen" required="True"/>
+
+  <node name="ros_interface" pkg="aer1217_ardrone_simulator" 
+    type="ros_interface.py" output="screen" required="True"/>
+
+  <node name="MPC" pkg="aer1217_ardrone_simulator" 
+    type="MPC.py" output="screen" required="True"/>
+
+  <node name="DNN_infer" pkg="aer1217_ardrone_simulator" 
+    type="inference.py" output="screen" required="True"/>
+
+
+
+  <!-- TODO: Create ROS node that controls the AR Drone (aer1217_roscontroller.py) -->
+  <!-- TODO: Create ROS node that publishes quadrotor desired positions (desired_positions.py) -->
+ 
+
+</launch>
