@@ -7,8 +7,11 @@ Link for [Demonstration video](https://youtu.be/Rri49FRkjCo)
 
 ## Requirements 
 [CVXOPT](https://cvxopt.org/)
+
 [Keras](https://keras.io/)
+
 [ROS Kinetic](http://wiki.ros.org/kinetic)
+
 Preferable environment: Ubuntu 16.04
 
 ## Simulator Environment Setup
