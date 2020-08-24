@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Class for writing MPC controller"""
+"""Class for interfacing MPC controller with Drone"""
 
 from __future__ import division, print_function, absolute_import
 
