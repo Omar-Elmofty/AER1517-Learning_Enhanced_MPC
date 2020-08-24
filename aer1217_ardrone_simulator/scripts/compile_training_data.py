@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Class for writing MPC controller"""
+"""Class for compiling training data"""
 
 from __future__ import division, print_function, absolute_import
 
